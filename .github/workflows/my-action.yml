@@ -1,0 +1,14 @@
+name: Windows Cloud Run
+on: [push]
+
+jobs:
+  build:
+    # Instead of 'self-hosted', we use GitHub's machine
+    runs-on: windows-latest 
+
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Run a Command
+        run: echo "I am running on GitHub's Windows server, not my PC!"
+        
